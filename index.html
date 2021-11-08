@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="baidu-site-verification" content="code-inlfpabZzU" />
+    <title>01→love</title>
+    <link href="mi/bootstrap.min.css" rel="stylesheet" />
+    <body _c_t_j1="1">
+      <div class="container pt-5">
+        <div class="card mt-3">
+          <h5 class="card-header">01→love</h5>
+          <div class="card-body">
+            <div>
+              <h4>原内容:</h4>
+              <textarea
+                name="a_source"
+                id="a_source"
+                rows="5"
+                class="textareas form-control"
+              >
+1101100 1101111 1110110 1100101</textarea
+              >
+            </div>
+            <div>
+              <div>
+                <button
+                  class="btn btn-primary"
+                  onclick="chuli()"
+                  style="margin: 10px auto"
+                >
+                  转换
+                </button>
+                <input
+                  class="btn btn-warning btn-copy"
+                  type="button"
+                  value="复制"
+                  data-clipboard-target="#u_source"
+                />
+              </div>
+            </div>
+            <div>
+              <h4>结果:</h4>
+              <textarea
+                name="u_source"
+                id="u_source"
+                rows="5"
+                class="textareas form-control"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <script
+          src="mi/jquery.slim.min.js.tz"
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="mi/popper.min.js.tz"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="mi/bootstrap.min.js.tz"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+          crossorigin="anonymous"
+        ></script>
+        <script src="mi/clipboard.min.js.tz"></script>
+        <script src="mi/layer.js.tz"></script>
+        <script src="mi/public.min.js.tz"></script>
+        <script src="mi/main.js.tz"></script>
+        <script>
+          function chuli() {
+            if ("" != $("#a_source").val()) {
+              for (
+                var r = $("#a_source").val().split(" "), a = "", e = 0;
+                e < r.length;
+                e++
+              )
+                a += String.fromCharCode(parseInt(r[e], 2));
+              $("#u_source").val(""), $("#u_source").val(a);
+            } else alert("请输入字符串");
+          }
+        </script>
+        <script>
+          var clipboard = new ClipboardJS("#copyurl");
+          clipboard.on("success", function (r) {
+            r.clearSelection(), layer.msg("复制成功！");
+          }),
+            clipboard.on("error", function (r) {
+              r.clearSelection(), layer.msg("复制失败！");
+            });
+        </script>
+        <script type="text/javascript">
+          $(function () {
+            $(".nav>li").hover(
+              function () {
+                $(this).children("ul").stop(!0, !0).show(300);
+              },
+              function () {
+                $(this).children("ul").stop(!0, !0).hide(300);
+              }
+            );
+          });
+        </script>
+        <script src="mi/bootstrap.min.js(1).tz"></script>
+      </div>
+    </body>
+  </head>
+</html>
